@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  width: 100%;
+  overflow-x: hidden;
+}
+.body > div {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration-line: none;
+  font-size: inherit;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+.hover_opacity .b {
+  opacity: 0;
+}
+.hover .b {
+  display: none;
+}
+
+@media (max-width: 988px) {
+  .pc {
+    display: none;
+  }
+}
+@keyframes up_down {
+  from {
+    transform: translateY(-2vh);
+  }
+  to {
+    transform: translateY(2vh);
+  }
+}
+#index {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #fdfaf2;
+}
+#index img {
+  position: absolute;
+}
+#index .cloud {
+  width: 1466px;
+  max-width: 80vw;
+  bottom: 0;
+  right: 0;
+}
+#index .school {
+  max-width: 150vw;
+  top: 23.4vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#index .earth {
+  bottom: 0;
+  left: 0;
+  width: 673px;
+  max-width: 45vw;
+}
+#index .star {
+  width: 550px;
+  max-width: 35vw;
+  top: 0;
+  right: 0;
+}
+#index .txt1 {
+  width: 331px;
+  max-width: 22vw;
+  top: 7.8vh;
+  left: 32.63vw;
+  transform: translateX(-50%);
+}
+#index .txt2 {
+  top: 8vh;
+  left: 59.63vw;
+  transform: translateX(-50%);
+  width: 181px;
+  max-width: 11.9vw;
+}
+#index a img {
+  width: 176px;
+  max-width: 11.6vw;
+  top: 6.8vh;
+  left: 66.2vw;
+  animation: up_down 3s linear alternate infinite;
+}
+
+#photo {
+  background: #fdfaf2;
+  padding-top: 20px;
+}
+#photo .panel {
+  margin: 0 auto;
+  width: 1135px;
+  max-width: 90vw;
+  display: flex;
+  justify-content: space-between;
+}
+#photo .panel .list_group {
+  text-align: center;
+  width: 16%;
+}
+#photo .panel .list_group .txt1 {
+  width: 96%;
+  margin-bottom: 30px;
+}
+#photo .panel .list_group .txt2 {
+  width: 95%;
+  margin-top: 22px;
+}
+#photo .panel .list_group a img {
+  width: 58.7%;
+}
+#photo .panel .list_group [href="index.html"] img {
+  margin-top: 33px;
+}
+#photo .panel .slide {
+  width: 80%;
+  position: relative;
+}
+#photo .panel .slide .text {
+  position: absolute;
+  width: 15px;
+  max-width: 1.2vw;
+  top: 150px;
+  right: max(-5px, -1vw);
+}
+#photo .school {
+  display: block;
+  margin: 0 auto;
+  margin-top: -20px;
+  width: 1286px;
+  max-width: 90vw;
+}
