@@ -1,0 +1,686 @@
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+/*
+    these are just the default styles used in the Cycle2 demo pages.  
+    you can use these styles or any others that you wish.
+*/
+/* set border-box so that percents can be used for width, padding, etc (personal preference) */
+.cycle-slideshow,
+.cycle-slideshow * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.cycle-slideshow {
+  max-width: 1167px;
+  height: 236px;
+  max-height: 236px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  background: url(http://malsup.github.com/images/spinner.gif)
+    50% 50% no-repeat;
+}
+/* slideshow images (for most of the demos, these are the actual "slides") */
+.cycle-slideshow img {
+  /* 
+    some of these styles will be set by the plugin (by default) but setting them here
+    helps avoid flash-of-unstyled-content
+    */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  display: block;
+}
+/* in case script does not load */
+.cycle-slideshow img:first-child {
+  position: static;
+  z-index: 100;
+}
+/* pager */
+.cycle-pager {
+  text-align: right;
+  padding: 0 30px;
+  width: 100%;
+  z-index: 500;
+  position: absolute;
+  top: 196px;
+  overflow: hidden;
+}
+.cycle-pager span {
+  font-family: arial;
+  font-size: 40px;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 8px;
+}
+.cycle-pager span.cycle-pager-active {
+  color: #6e6e6e;
+}
+.cycle-pager span .cycle-pager > * {
+  cursor: pointer;
+}
+/* caption */
+.cycle-caption {
+  position: absolute;
+  color: white;
+  bottom: 15px;
+  right: 15px;
+  z-index: 700;
+}
+/* overlay */
+.cycle-overlay {
+  font-family: tahoma, arial;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 600;
+  background: black;
+  color: white;
+  padding: 15px;
+  opacity: 0.5;
+}
+/* prev / next links */
+.cycle-prev,
+.cycle-next {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  z-index: 800;
+  height: 100%;
+  cursor: pointer;
+}
+.cycle-prev {
+  left: 0;
+  background: url(http://malsup.github.com/images/left.png)
+    50% 50% no-repeat;
+}
+.cycle-next {
+  right: 0;
+  background: url(http://malsup.github.com/images/right.png)
+    50% 50% no-repeat;
+}
+.cycle-prev:hover,
+.cycle-next:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+.disabled {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+/* display paused text on top of paused slideshow */
+.cycle-paused:after {
+  content: "Paused";
+  color: white;
+  background: black;
+  padding: 10px;
+  z-index: 500;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 10px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+/* 
+    media queries 
+    some style overrides to make things more pleasant on mobile devices
+*/
+@media only screen and (max-width: 480px),
+  only screen and (max-device-width: 480px) {
+  .cycle-slideshow {
+    width: 200px;
+  }
+  .cycle-overlay {
+    padding: 4px;
+  }
+  .cycle-caption {
+    bottom: 4px;
+    right: 4px;
+  }
+}
+section {
+  background-image: url(../images/bg.jpg);
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+section .main {
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+  z-index: 1;
+}
+section.c1 .main,
+section.a1 .main,
+section.p1 .main {
+  background-position: top center;
+  background-size: auto;
+  opacity: 0.1;
+  -moz-opacity: 0.1;
+  -khtml-opacity: 0.1;
+  filter: alpha(opacity = 10);
+}
+section.i1,
+section.c1,
+section.a1,
+section.p1 {
+  z-index: 111;
+}
+section.i1 .main,
+section.c1 .main,
+section.a1 .main,
+section.p1 .main {
+  min-height: 100vh;
+  background-repeat: no-repeat !important;
+}
+section.i1 .main .mini_logo,
+section.c1 .main .mini_logo,
+section.a1 .main .mini_logo,
+section.p1 .main .mini_logo {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  width: 395px;
+  height: 169px;
+}
+section.i1 .main .video,
+section.c1 .main .video,
+section.a1 .main .video,
+section.p1 .main .video {
+  position: absolute;
+  top: 62px;
+  right: 0;
+}
+section.i1 .main a.btn_home,
+section.c1 .main a.btn_home,
+section.a1 .main a.btn_home,
+section.p1 .main a.btn_home {
+  position: absolute;
+  display: block;
+  z-index: 1000;
+  background-image: url(../images/btn_home.png);
+  width: 128px;
+  height: 130px;
+  top: 270px;
+  left: 75px;
+}
+section.i1 .main a.btn_home:hover,
+section.c1 .main a.btn_home:hover,
+section.a1 .main a.btn_home:hover,
+section.p1 .main a.btn_home:hover {
+  -webkit-filter: brightness(110%); /* Safari */
+  filter: brightness(110%);
+}
+section.i1 .main a.btn_exit,
+section.c1 .main a.btn_exit,
+section.a1 .main a.btn_exit,
+section.p1 .main a.btn_exit {
+  position: absolute;
+  display: block;
+  z-index: 1000;
+  background-image: url(../images/btn_exit.png);
+  width: 94px;
+  height: 92px;
+  bottom: -150px;
+  right: 40px;
+}
+section.i1 .main a.btn_exit:hover,
+section.c1 .main a.btn_exit:hover,
+section.a1 .main a.btn_exit:hover,
+section.p1 .main a.btn_exit:hover {
+  -webkit-filter: brightness(110%); /* Safari */
+  filter: brightness(110%);
+}
+section.i1 .main {
+  position: relative;
+  background-image: url(../images/index_1p.png);
+  background-size: auto;
+  background-position: top center;
+  width: 100%;
+  max-width: 1530px;
+  min-width: 1530px;
+}
+section.i1 .main .p1 {
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  filter: alpha(opacity = 0);
+}
+section.i1 .main .p1 {
+  width: 396px;
+  height: 215px;
+  top: 90px;
+  left: 350px;
+}
+section.i1 .main a {
+  position: absolute;
+  display: block;
+  z-index: 100;
+  opacity: 0;
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  filter: alpha(opacity = 0);
+}
+section.i1 .main a:hover {
+  -webkit-filter: brightness(110%); /* Safari */
+  filter: brightness(110%);
+}
+section.i1 .main a.btn_p1 {
+  background: url(../images/index_a.png);
+  top: 310px;
+  left: 450px;
+  width: 211px;
+  height: 211px;
+}
+section.i1 .main a.btn_p2 {
+  background: url(../images/index_b.png);
+  top: 330px;
+  left: 710px;
+  width: 211px;
+  height: 211px;
+}
+section.i1 .main a.btn_p3 {
+  top: 300px;
+  left: 740px;
+  width: 250px;
+  height: 240px;
+}
+section.c1 .main {
+  background-image: url(../images/campus_1.png);
+}
+section.a1 .main {
+  background-image: url(../images/activities_1.png);
+}
+section.a1 .main a {
+  position: absolute;
+  display: block;
+  z-index: 1000;
+}
+section.a1 .main a:hover {
+  -webkit-filter: brightness(110%); /* Safari */
+  filter: brightness(110%);
+}
+section.a1 .main a.btn_p1 {
+  background: url(../images/activities_a.png);
+  top: 100px;
+  left: 340px;
+  width: 197px;
+  height: 69px;
+}
+section.a1 .main a.btn_p2 {
+  background: url(../images/activities_b.png);
+  top: 175px;
+  left: 340px;
+  width: 197px;
+  height: 44px;
+}
+section.a1 .main a.btn_p3 {
+  background: url(../images/activities_c.png);
+  top: 225px;
+  left: 340px;
+  width: 197px;
+  height: 44px;
+}
+section.a1 .main a.btn_p4 {
+  background: url(../images/activities_d.png);
+  top: 275px;
+  left: 340px;
+  width: 197px;
+  height: 69px;
+}
+section.a1 .main a.btn_p5 {
+  background: url(../images/activities_e.png);
+  top: 350px;
+  left: 340px;
+  width: 197px;
+  height: 69px;
+}
+section.a1 .main a.btn_p6 {
+  background: url(../images/activities_f.png);
+  top: 425px;
+  left: 340px;
+  width: 197px;
+  height: 69px;
+}
+section.a1 .main a.btn_p7 {
+  background: url(../images/activities_g.png);
+  top: 500px;
+  left: 340px;
+  width: 197px;
+  height: 69px;
+}
+section.a1 .main a.btn_p8 {
+  background: url(../images/activities_h.png);
+  top: 575px;
+  left: 340px;
+  width: 197px;
+  height: 44px;
+}
+section.a1 .main a.btn_p9 {
+  background: url(../images/activities_i.png);
+  top: 625px;
+  left: 340px;
+  width: 197px;
+  height: 44px;
+}
+section.a1 .main a.btn_p10 {
+  background: url(../images/activities_j.png);
+  top: 675px;
+  left: 340px;
+  width: 197px;
+  height: 44px;
+}
+section.a1 .main a.btn_p11 {
+  background: url(../images/activities_k.png);
+  top: 725px;
+  left: 340px;
+  width: 197px;
+  height: 44px;
+}
+section.p1 .main .container {
+  background: url(../images/photos_1.png) no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding: 25px 25px 0 395px;
+}
+section.p1 .main .container .content {
+  position: relative;
+  margin: 0;
+}
+section.p1 .main a.btn_p1,
+section.p1 .main a.btn_p2,
+section.p1 .main a.btn_p3,
+section.p1 .main a.btn_p4,
+section.p1 .main a.btn_p5 {
+  position: absolute;
+  display: block;
+  z-index: 1000;
+}
+section.p1 .main a.btn_p1:hover,
+section.p1 .main a.btn_p2:hover,
+section.p1 .main a.btn_p3:hover,
+section.p1 .main a.btn_p4:hover,
+section.p1 .main a.btn_p5:hover {
+  -webkit-filter: brightness(110%); /* Safari */
+  filter: brightness(110%);
+}
+section.p1 .main a.btn_p1 {
+  background: url(../images/photo_a.png);
+  top: 280px;
+  left: 250px;
+  width: 105px;
+  height: 105px;
+}
+section.p1 .main a.btn_p2 {
+  background: url(../images/photo_b.png);
+  top: 400px;
+  left: 250px;
+  width: 105px;
+  height: 105px;
+}
+section.p1 .main a.btn_p3 {
+  background: url(../images/photo_c.png);
+  top: 520px;
+  left: 250px;
+  width: 105px;
+  height: 105px;
+}
+section.p1 .main a.btn_p4 {
+  background: url(../images/photo_d.png);
+  top: 440px;
+  left: 80px;
+  width: 135px;
+  height: 135px;
+}
+section.p1 .main a.btn_p5 {
+  background: url(../images/photo_e.png);
+  top: 580px;
+  left: 80px;
+  width: 135px;
+  height: 135px;
+}
+/*--------------------Manton--------------------*/
+html,
+body {
+  height: 100%;
+}
+body {
+  min-width: 1198px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  border: 0;
+  outline: 0;
+  font-family: Arial, "黑體-繁", "微軟正黑體";
+  word-break: break-all;
+}
+a {
+  border: 0;
+  outline: 0;
+}
+img {
+  outline: 0;
+  border: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+ul,
+li,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a,
+a:hover {
+  text-decoration: none;
+  text-indent: -9999px;
+}
+@-webkit-keyframes twinkling {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.twinkling {
+  animation: twinkling 0.5s infinite ease-in-out;
+  -o-animation: twinkling 0.5s infinite ease-in-out;
+  -ms-animation: twinkling 0.5s infinite ease-in-out;
+  -moz-animation: twinkling 0.5s infinite ease-in-out;
+  -webkit-animation: twinkling 0.5s infinite ease-in-out;
+}
+/*----------------------------------------------------------------------*/
